@@ -1,0 +1,348 @@
+.click {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+/* sign-in link */
+.sign_in {
+  background: var(--txt);
+  color: var(--sec);
+  padding: 7px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.sign_in > h6 {
+  font-size: 14px;
+  font-weight: normal;
+}
+.icon {
+  cursor: pointer;
+}
+.sign_in > h6 > a {
+  font-size: 16px;
+  text-decoration: underline;
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  color: var(--sec);
+  font-style: normal;
+  &:hover {
+    color: skyblue;
+  }
+}
+.s_icon {
+  font-size: 25px;
+  position: absolute;
+  right: 10%;
+  &:hover {
+    animation: linear infinite rot 0.4s;
+    color: red;
+    transition: all 0.2s;
+  }
+}
+@keyframes rot {
+  from {
+    rotate: 20deg;
+  }
+  to {
+    rotate: -20deg;
+  }
+}
+.act {
+  display: none;
+}
+/* ------------------------------------------------------------*/
+/* navbar */
+.nav-overall {
+  padding: 10px 5px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.nav-left {
+  width: 60%;
+  justify-content: space-evenly;
+}
+.nav-right {
+  width: 40%;
+  justify-content: space-evenly;
+  padding: 0 10px;
+}
+/* logo */
+.nav-con > h3 {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* link */
+.n-link {
+  width: 70%;
+  justify-content: space-evenly;
+}
+.nav-con > a {
+  color: var(--txt);
+  font-family: "Aclonica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  padding: 0 10px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid black;
+    top: 10;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+    visibility: hidden;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid black;
+    bottom: 0px;
+    right: 0;
+    border-left: none;
+    border-top: none;
+    visibility: hidden;
+  }
+  &:hover::after {
+    transition: all 0.2s;
+    visibility: visible;
+  }
+  &:hover::before {
+    transition: all 0.2s;
+    visibility: visible;
+  }
+  &:hover {
+    transition: all 0.2s;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+}
+/*search */
+.nav-sec {
+  width: 70%;
+}
+.nav-sec > input {
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  padding: 5px 15px;
+  width: 100%;
+  &:focus {
+    border: 3px solid var(--txt);
+    box-shadow: 0 0 5px var(--sec);
+  }
+}
+.s-icon {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  font-size: 30px;
+  border-radius: 50%;
+  background: var(--sec);
+}
+.nav-icons {
+  width: 40%;
+}
+.nav-icons > h4 {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  &:hover {
+    background-color: white;
+  }
+}
+.c-icon {
+  font-size: 26px;
+}
+.sm-view,
+.sm-bar {
+  display: none;
+}
+.clk4 {
+  display: none;
+}
+/* mobile */
+@media screen and (max-width: 760px) and (min-width: 300px) {
+  .nav-overall {
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .sign_in > h6 {
+    font-size: 10px;
+  }
+  .sign_in > h6 > a {
+    font-size: 11px;
+  }
+  .s_icon {
+    font-size: 16px;
+    right: 3%;
+  }
+  .n-link {
+    position: fixed;
+    width: 100%;
+    min-height: 60vh;
+    background: rgb(41, 40, 40);
+    flex-direction: column;
+    justify-content: center;
+    top: -1000px;
+    left: 0;
+    gap: 20px;
+    padding: 30px 0;
+    opacity: 0;
+  }
+  .active {
+    transition: all 0.5s;
+    top: 0px;
+    opacity: 1;
+    animation: bar 0.7s ease-in-out;
+  }
+  @keyframes bar {
+    from {
+      opacity: 0.5;
+      scale: 0;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+  .n-link > a {
+    color: var(--sec);
+  }
+  .nav-right {
+    padding: 0 5px;
+    display: none;
+  }
+  .sm-view {
+    display: flex;
+    flex-direction: column;
+  }
+  .c-icon {
+    font-size: 20px;
+    color: white;
+  }
+  .nav-sec {
+    width: 100%;
+  }
+  .nav-icons {
+    width: 100%;
+  }
+  .sm-bar {
+    width: 30px;
+    background: var(--txt);
+    height: 30px;
+    border-radius: 5px;
+    display: grid;
+    place-content: center;
+    color: var(--sec);
+    font-size: 30px;
+    z-index: 9999;
+    box-shadow: inset 0 0 5px white;
+  }
+  .nav-left {
+    width: fit-content;
+  }
+  .nav-right {
+    width: 100%;
+  }
+  .nav-con > a {
+    width: 70%;
+    padding: 5px;
+    text-align: center;
+    &::before {
+      border: white 2px solid;
+      border-left: none;
+      border-top: none;
+    }
+    &::after {
+      border: white 2px solid;
+      border-right: none;
+      border-bottom: none;
+      top:0;
+    }
+    &:hover {
+       background-color: rgb(254, 254, 254,0.4);
+      text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    }
+  }
+  .clk4 {
+    display: block;
+  }
+  .b-icon {
+    margin-bottom: 4px;
+  }
+  .c-icon{
+    &:hover{
+      color: var(--txt);
+    }
+  }
+}
+@media screen and (max-width: 900px) and (min-width: 700px) {
+  .c-icon {
+    font-size: 20px;
+  }
+  .nav-con > h3 {
+    font-size: 20px;
+  }
+  .nav-con > a {
+    font-size: 13px;
+  }
+  .nav-sec > input {
+    padding: 3px 15px;
+  }
+  .s-icon {
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 2560px) and (min-width: 1900px) {
+   .nav-overall {
+    justify-content: space-between;
+    padding: 30px;
+  }
+  .nav-con > h3 {
+    font-size: 45px;
+  }
+  .nav-con > a {
+    font-size: 30px;
+  }
+  .s-icon {
+    font-size: 45px;
+  }
+  .nav-sec > input {
+    padding: 15px 15px;
+  }
+  .c-icon{
+    font-size: 40px;
+  }
+  .nav-icons{
+    gap:30px;
+  }
+  .sign_in{
+    padding: 15px;
+  }
+  .sign_in > h6{
+    font-size: 30px;
+  }
+  .sign_in > h6 > a{
+    font-size: 35px;
+  }
+  .s_icon{
+    font-size: 40px;
+  }
+  
+}

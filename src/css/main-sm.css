@@ -1,0 +1,189 @@
+@media screen and (max-width: 900px) and (min-width: 700px) {
+  .home {
+    padding-top: 65px;
+  }
+  .h-con{
+    gap: 20px;
+    width: 90%;
+  }
+  .h-con > h1 {
+    font-size: 50px;
+    width: 90%;
+  }
+  .h-con > p{
+    width: 100%;
+    font-size: 12px;
+  }
+  .h-p-box{
+    width: 5%;
+    height: 220px;
+  }
+  .h-p-txt > h4 {
+    font-size: 12px;
+  }
+  .h-pic{
+    width: 85%;
+    gap: 5px;
+  }
+  .btn-shop {
+     padding: 5px 20px;
+     font-size: 15px;
+  }
+  .run-txt{
+    padding: 15px;
+  }
+  .r-vec{
+    padding:0 10px;
+  }
+  .r-vec > img{
+    width: 100px;
+  }
+  /* collection */
+  .col-min > img{
+    width: 100%;
+  }
+  .col-right{
+    gap:15px;
+  }
+
+}
+@media screen and (max-width: 700px) and (min-width: 300px) {
+   /* home pae */
+    .home{
+       padding-top: 60px; 
+       gap:20px
+   }
+    .h-con{
+     gap:10px;
+     width: 90%;
+   }
+   .h-con > h1 {
+    font-size: 22px;
+    width: 100%; 
+   }
+   .h-con > p{
+    width: 100%;
+    font-size: 6px;
+   }
+   .h-pic{
+    width: 90%;
+    gap: 5px;
+  }
+  .h-p-box{
+    width: 5%;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 2px;
+  }
+   .h-p-txt > h4 {
+    font-size: 5px;
+  }
+   .btn-shop {
+     padding: 5px 20px;
+     font-size: 12px;
+  }
+  .run-txt{
+    padding: 10px 0;
+  }
+  .run-txt > h2{
+    font-size: 15px;
+  }
+  /* --------------------------------- */
+  /* collection */
+  .col-card{
+     flex-direction: column;
+  }
+  .col-cover{
+    width: 100%;
+    height: 400px;
+  }
+  .col-b-txt >h2 {
+    font-size: 30px;
+  }
+  .s-dis > h3{
+    font-size: 20px;
+  }
+  .s-dis >small{
+    font-size: 10px;
+  }
+  .col-min{
+    width: 45%;
+  }
+  .col-min > h5{
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  .r-vec {
+    padding:0 10px;
+  }
+  .r-vec > img{
+    width: 70px;
+  }
+}
+@media screen and (max-width: 2560px) and (min-width: 1900px) {
+  .home{
+    padding-top: 110px;
+  } 
+  .h-con > h1 {
+    font-size: 80px;
+    width: 70%;
+   }
+   .h-con > p{
+    font-size: 35px;
+    width: 70%;
+   }
+   .h-p-box{
+    width: 6%;
+    height: 400px;
+   }
+   .btn-shop{
+    padding: 15px 40px;
+   }
+   .run-txt{
+    padding: 50px 0;
+   }
+   .r-vec > img{
+    width: 200px;
+   }
+   .collecton{
+    padding: 50px 0;
+   }
+   .collection > h1{
+    font-size: 80px !important;
+   }
+   .col-cover{
+    min-height: 730px;
+   }
+   .col-big{
+    gap: 20px;
+   }
+   .col-b-txt > h2{
+    font-size: 70px;
+   }
+   .col-b-show{
+    gap: 30px !important;
+   }
+   .s-dis{
+    gap: 20px;
+   }
+   .s-dis > h3{
+     font-size: 40px;
+   }
+   .s-dis > small{
+    font-size: 23px;
+   }
+   .col-min{
+    width: 45%;
+    height: 50%;
+    &::after{
+      height: 80%;
+    }
+   }
+   .col-min >img{
+    width: 60%;
+    height: 84%;
+   }
+   .col-min > h5{
+    font-size: 30px;
+   }
+}

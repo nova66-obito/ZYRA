@@ -1,0 +1,163 @@
+/* Reviews Section */
+.co-reviews {
+  padding:10px;
+  min-height:500px;
+  overflow: hidden;
+  width: 100%;
+}
+/* Swiper Container */
+.co-reviews .swiper {
+  width: 100%;
+  padding-top: 40px !important;
+}
+/* Swiper Slides */
+.co-reviews .swiper-slide {
+  height: 350px;
+  width: 320px;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  transform: translate3d(0px, 0px, -750px) rotateX(0deg) rotateY(0deg) scale(0) !important;
+}
+
+.co-reviews .swiper-slide-visible {
+  transform: translate3d(0px, 0px, -450px) rotateX(0deg) rotateY(0deg) scale(0) !important;
+}
+/* left & right box */
+.co-reviews .swiper-slide-next {
+  background: transparent !important;
+  opacity: 0.5;
+  transform: translateX(80px) rotate(20deg) scale(0.8) translateY(20px)!important;
+}
+.co-reviews .swiper-slide-prev{
+   opacity: 0.5;
+   background: transparent !important;
+   transform: translateX(-80px) rotate(-20deg) scale(0.8)  translateY(20px)!important;
+}
+/* main box */
+.co-reviews .swiper-slide-active {
+  transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1) !important;
+}
+
+/* Content Styles */
+
+.swiper-slide  > p{
+  font-size: 25px;
+}
+.swiper-slide > h2{
+  font-weight: 300px;
+  font-family:'Times New Roman', Times, serif;
+}
+/* Shadow Removal */
+.co-reviews .swiper-3d .swiper-slide-shadow-left,
+.co-reviews .swiper-3d .swiper-slide-shadow-right {
+  background-image: none !important;
+}
+
+/* Pagination Styles - Updated to ensure visibility */
+.co-reviews .swiper-pagination {
+  position: relative !important;
+  bottom: 0 !important;
+  margin-top: 30px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
+  z-index: 10 !important;
+  cursor: pointer !important;
+
+}
+
+.co-reviews .swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background:white !important;
+  opacity: 1 !important;
+  border-radius: 50% !important;
+  margin: 0 4px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.co-reviews .swiper-pagination-bullet-active {
+  background:rgb(72, 70, 70) !important;
+}
+
+/* Make sure swiper container has proper spacing */
+.co-reviews .swiper {
+  padding-bottom: 40px !important;
+  overflow: hidden !important;
+}
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .co-reviews h1 {
+    font-size: 35px;
+  }
+  .co-reviews .swiper-slide-next {
+  background: transparent !important;
+  opacity: 0.5;
+  transform: translateX(0px) rotate(20deg) scale(0.8) translateY(20px)!important;
+}
+.co-reviews .swiper-slide-prev{
+   opacity: 0.5;
+   background: transparent !important;
+   transform: translateX(-0px) rotate(-20deg) scale(0.8)  translateY(20px)!important;
+}
+.co-reviews {
+    padding: 10px;
+    min-height: 280px;
+}
+.swiper-slide  > p{
+  font-size: 25px;
+  width: 70%;
+}
+}
+
+@media only screen and (max-width: 650px) {
+  .co-reviews .swiper-slide {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .co-reviews h1 {
+    font-size: 22px !important;
+  }
+
+  .co-reviews p {
+    font-size: 15px;
+  }
+  
+  .co-reviews .swiper-slide {
+    height: auto;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 2560px) and (min-width: 1900px) {
+    .co-reviews{
+      padding-top: 60px;
+    }  
+   .co-reviews .swiper-slide {
+      width: 550px;
+      height: 500px;
+    }
+     .co-reviews p {
+      font-size: 40px;
+    }
+    .co-reviews  h1{
+       font-size: 80px;
+    }
+    .co-reviews h2{
+      font-size: 50px;
+    }
+    .co-reviews .swiper-pagination-bullet {
+      width: 15px !important;
+      height: 15px !important;
+    }
+}

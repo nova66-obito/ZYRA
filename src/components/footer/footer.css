@@ -1,0 +1,139 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+footer{
+    background: var(--min);
+    padding:100px 50px;
+    gap:50px
+}
+.f-left{
+    width: 25%;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.f-right{
+    width: 75%;
+    gap:30px
+}
+.f-soc{
+    gap:20px;
+    align-self: flex-start;
+}
+.f-soc > p{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--sec);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:first-child:hover{
+        background-color: blue;
+        color: white;
+    }
+    &:nth-child(2):hover{
+        background-color:skyblue;
+        color: white;
+    }
+     &:nth-child(3):hover{
+        background-color:tomato;
+        color: white;
+    }
+     &:nth-child(4):hover{
+        background-color:black;
+        color: white;
+    }
+
+}
+.f-link{
+    width: 25%;
+    gap:20px;
+}
+.f-link > h5{
+    text-transform: uppercase;
+    align-self: flex-start;
+    font-family: 'Satoshi', sans-serif;
+    font-weight:400;
+}
+.f-a-link{
+    width: 100%;
+    gap:10px;
+}
+.f-a-link > a{
+    text-decoration: none;
+    color: var(--txt);
+    align-self: flex-start;
+    font-size: 15px;
+    &:hover{
+        color: gray;
+        text-decoration: underline black;
+    }
+}
+@media screen and (max-width:1100px) and (min-width:700px) {
+    footer{
+        flex-direction: column;
+        padding: 50px;
+    }
+    .f-right{
+        width: 100%;
+    }
+    .f-left{
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+    }
+    .f-left > p{
+        text-align: center;
+    }
+    .f-soc{
+        justify-content: center;
+        align-self: center;
+    }
+    .f-a-link > a{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:700px) and (min-width:300px) {
+    footer{
+        flex-direction: column;
+        padding: 30px 0;
+        gap:30px;
+    }
+    .f-right{
+        width: 100%;
+        flex-direction: column;
+        gap:20px;
+    }
+    .f-left{
+        width: 90%;
+        gap:10px;
+    }
+    .f-a-link > a{
+        font-size: 10px;
+    }
+    .f-link{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 2560px) and (min-width: 1900px) {
+   .f-a-link > a{
+        font-size: 25px;
+    }
+    .f-link > h5{
+        font-size: 40px;
+    }
+    .f-left > h3{
+         font-size: 50px;
+    }
+    .f-left > p{
+        font-size: 30px;
+    }
+    .f-soc > p {
+    width: 55px;
+    height: 55px;
+   }
+   .f-cion{
+    font-size: 35px;
+   }
+}

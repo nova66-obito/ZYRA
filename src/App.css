@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aclonica&family=Acme&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+:root{
+  --sec:white;
+  --prime:rgba(236, 215, 198, 1);
+  --txt:rgb(0, 0, 0);
+  --min:rgba(240, 240, 240, 1);
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.full{
+  background: var(--prime);
+}
+.head{
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.heading{
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.sub{
+  font-family: "Aclonica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
