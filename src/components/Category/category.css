@@ -128,7 +128,7 @@
 }
 @media screen and (max-width:700px)  and (min-width:300px){
    .cate-cover{
-    height: 70vh;
+    height: 60vh;
    }
     .cat-txt > p {
         width: 90%;

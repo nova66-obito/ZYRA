@@ -5,6 +5,7 @@ import { FaHeart } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 import { FaBarsStaggered } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import "./nav.css"
 export default function Nav() {
     const [off, setOff] = useState(false);
@@ -15,13 +16,13 @@ export default function Nav() {
         }
 
     }
-    const link = ['Shop', 'On Sale', 'New Arrivals', 'Brands','search']
+    const link = [{show : 'Shop',line : '/'}, {show : 'On Sale'  ,line : "onshop"}, {show : 'New Arrivals' ,line:""}, {show : 'Brands',line:""},{show:'search',line:""}]
     return (
         <>
             <header>
                 {/* sign-in link */}
                 <div className={`sign_in stay center  position-relative ${off ? 'act' : null}`}>
-                    <h6>Sign up and get 20% off to your first order. <a href="" target="_blank" className="click">Sign Up Now</a></h6>
+                    <h6>Sign up and get 20% off to your first order. <Link to="login" className="click">Sign Up Now</Link></h6>
                     <IoMdClose className="s_icon icon" onClick={clk} />
                 </div>
                 {/* navbar */}
@@ -34,7 +35,7 @@ export default function Nav() {
                         <div className={`n-link nav-con center ${see ? 'active' : null}`}>
                             {link.map((val,i) => {
                                 return (
-                                    <a href="#" className={`click clk${i}`} >{val}</a>
+                                    <Link to={val.line} className={`click clk${i}`} >{val.show}</Link>
                                 )
                             })}
                             <div className="nav-right sm-view nav-box center">
